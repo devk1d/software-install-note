@@ -4,27 +4,27 @@
 
 Nginx 端口转发：
 
-server {
+    server {
 
-    listen 80 default_server;
-    listen [::]:80 default_server ipv6only=on;
+        listen 80 default_server;
+        listen [::]:80 default_server ipv6only=on;
 
-    server_name localhost;
+        server_name localhost;
 
-    location / {
-        proxy_pass http://localhost:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }   
+        location / {
+            proxy_pass http://localhost:3000;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+        }   
 
 
-    location ~ /\.ht {
-        deny all;
+        location ~ /\.ht {
+            deny all;
+        }
+
     }
-
-}
 
 
