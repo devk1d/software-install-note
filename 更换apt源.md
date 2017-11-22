@@ -17,4 +17,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ $Codename-security main multiverse res
 deb-src http://mirrors.aliyun.com/ubuntu/ $Codename-updates main multiverse restricted universe ">sources.list
 apt-get update
 
-``
+```
+
+
+参考：[http://www.cnblogs.com/lyon2014/p/4715379.html](http://www.cnblogs.com/lyon2014/p/4715379.html)
