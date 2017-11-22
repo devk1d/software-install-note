@@ -1,5 +1,14 @@
 
-更换阿里云的源，一键脚本
+备份 sources.list
+
+``` 
+cd /etc/apt/
+cp sources.list sources.list.bak
+
+```
+
+
+然后更换阿里云的源，一键脚本
 
 
 ```
